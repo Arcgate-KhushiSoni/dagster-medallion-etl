@@ -1,0 +1,8 @@
+venv/
+warehouse/
+*.duckdb
+*.duckdb.wal
+__pycache__/
+*.pyc
+.dagster/
+*.csv

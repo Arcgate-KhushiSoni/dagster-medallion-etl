@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "etl_pipeline"
+version = "0.1.0"
+description = "ETL Pipeline using Dagster + Medallion Architecture"
+requires-python = ">=3.9"
+dependencies = [
+    "dagster",
+    "dagster-webserver",
+    "dagster-duckdb-pandas",
+    "requests",
+    "pandas",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+# This tells Dagster where to find your Definitions
+[tool.dagster]
+module_name = "etl_pipeline.definitions"
